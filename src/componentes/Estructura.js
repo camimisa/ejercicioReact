@@ -15,16 +15,15 @@ export default class Estructura extends React.Component {
     }
 
     render() {
-        let {alumnos} = this.props
-        let valores = []
+        let { alumnos } = this.props
         let propiedades = Object.keys(alumnos[0])
 
         return (
             <div className="Estructura">
                 <div className="jumbotron">
-                    <h3>Componente</h3>
+                    <h3>Lista</h3>
                     {/* ------------------------------ */}
-                    <h5>Array de objetos en una tabla</h5>
+                    <h5>Informacion</h5>
 
                     <div className="table-responsive">
                         <table className="table table-dark">
@@ -39,20 +38,24 @@ export default class Estructura extends React.Component {
                             </thead>
                             <tbody>
                                 {
-                                    alumnos.map( (alumno, indice) => 
-                                        (<tr key={indice}>
-                                         {
-                                            Object.values(alumno).map((valor,indice) => 
-                                            <th key={indice}>
-                                                <td>
-                                                {valor.includes('https')? 
-                                                <img src={valor} width="50" alt='Imagen' />
-                                                : {valor}}</td>
-                                            </th>
+                                    alumnos.map((alumno, indice) =>
+                                    (<tr key={indice}>
+                                        {
+                                            Object.values(alumno).map((valor, indice) =>
+                                                <td key={indice}>
+
+                                                    {valor.length > 40 ?
+
+                                                        <p><img src={valor} width="50" alt='Imagen' /></p>
+
+                                                        : <p>{valor}</p>
+
+                                                    }
+                                                </td>
                                             )
-                                         }
-                                        </tr>)
-                                        
+                                        }
+                                    </tr>)
+
                                     )
                                 }
                             </tbody>
