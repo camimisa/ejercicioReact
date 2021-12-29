@@ -1,16 +1,16 @@
-.Estructura {
+.Tabla {
 
 }
 
-.Estructura .jumbotron {
+.Tabla .jumbotron {
     background-color: rgb(149, 25, 52);
     color: white;
 }
 
-.Estructura hr {
+.Tabla hr {
     background-color: #eee;
 }
 
-.Estructura .table td, .Estructura .table th {
+.Tabla .table td, .Tabla .table th {
     vertical-align: middle;
 }

@@ -1,25 +1,12 @@
 import React from 'react'
 
-import './Estructura.css'
+import './Tabla.css'
 
-export default class Estructura extends React.Component {
-
-    constructor(props) {
-        super(props)
-
-        console.log('Estructura -> constructor')
-    }
-
-    state = {
-        mostrar: true
-    }
-
-    render() {
-        let { alumnos } = this.props
+export default function Tabla (props){
+        let { alumnos } = props
         let propiedades = Object.keys(alumnos[0])
-
         return (
-            <div className="Estructura">
+            <div className="Tabla">
                 <div className="jumbotron">
                     <h3>Lista</h3>
                     {/* ------------------------------ */}
@@ -66,6 +53,6 @@ export default class Estructura extends React.Component {
                 </div>
             </div>
 
-        )
-    }
+        );
+    
 }
